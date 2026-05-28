@@ -20,7 +20,7 @@ import type {
 import { GrypeEpssRescanProvider } from "./provider.js";
 
 const PLUGIN_NAME = "security-rescan";
-const PLUGIN_VERSION = "2026.528.1";
+const PLUGIN_VERSION = "2026.528.2";
 
 export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugin => {
   const provider = new GrypeEpssRescanProvider();
@@ -44,7 +44,7 @@ export const createPlugin: VibePluginFactory = (_ctx: ProfileContext): VibePlugi
     name: PLUGIN_NAME,
     version: PLUGIN_VERSION,
     description:
-      "Scheduled nightly rescan for the scheduled.rescan lifecycle stage (Grype + optional EPSS enrichment).",
+      "Scheduled nightly rescan for the scheduled.rescan lifecycle stage — Grype offline against the latest cached SBOM with optional FIRST.org EPSS enrichment.",
     tags: ["backend", "provider", "integration"],
     capabilities: {
       storage: "rw",
